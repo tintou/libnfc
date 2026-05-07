@@ -48,6 +48,10 @@ libnfcdrivers_la_LIBADD += @LIBNFC_NCI_LIBS@
 libnfcdrivers_la_SOURCES += pn71xx.c pn71xx.h
 endif
 
+if DRIVER_NSR106_USB_ENABLED
+libnfcdrivers_la_SOURCES += nsr106_usb.c nsr106_usb.h
+endif
+
 if PCSC_ENABLED
   libnfcdrivers_la_CFLAGS += @libpcsclite_CFLAGS@
   libnfcdrivers_la_LIBADD += @libpcsclite_LIBS@

@@ -108,6 +108,10 @@
 #  include "drivers/pn53x_usb.h"
 #endif /* DRIVER_PN53X_USB_ENABLED */
 
+#if defined (DRIVER_NSR106_USB_ENABLED)
+#  include "drivers/nsr106_usb.h"
+#endif /* DRIVER_NSR106_USB_ENABLED */
+
 #if defined (DRIVER_ARYGON_ENABLED)
 #  include "drivers/arygon.h"
 #endif /* DRIVER_ARYGON_ENABLED */
@@ -164,6 +168,9 @@ nfc_drivers_init(void)
 #if defined (DRIVER_PN53X_USB_ENABLED)
   nfc_register_driver(&pn53x_usb_driver);
 #endif /* DRIVER_PN53X_USB_ENABLED */
+#if defined (DRIVER_NSR106_USB_ENABLED)
+  nfc_register_driver(&nsr106_usb_driver);
+#endif /* DRIVER_NSR106_USB_ENABLED */
 #if defined (DRIVER_PCSC_ENABLED)
   nfc_register_driver(&pcsc_driver);
 #endif /* DRIVER_ACR122_PCSC_ENABLED */
