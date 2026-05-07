@@ -1,4 +1,4 @@
-# udev rules file for PN531 and PN533 devices (for udev 0.98 version)
+# udev rules file for PN531, PN533 and NSR106 devices (for udev 0.98 version)
 # to be installed in /etc/udev/rules.d
 
 SUBSYSTEM!="usb|usb_device", GOTO="pn53x_rules_end"
@@ -18,5 +18,13 @@ ATTRS{idVendor}=="054c", ATTRS{idProduct}=="02e1", MODE="0664", GROUP="plugdev"
 # ACR122 / Touchatag
 ATTRS{idVendor}=="072f", ATTRS{idProduct}=="2200", MODE="0664", GROUP="plugdev"
 ATTRS{idVendor}=="072f", ATTRS{idProduct}=="90cc", MODE="0664", GROUP="plugdev"
+
+# NSR106 (wCopy NSR106 / 2SING family, USB HID, PN532-based)
+ATTRS{idVendor}=="0416", ATTRS{idProduct}=="b008", MODE="0664", GROUP="plugdev"
+ATTRS{idVendor}=="0416", ATTRS{idProduct}=="b029", MODE="0664", GROUP="plugdev"
+ATTRS{idVendor}=="0416", ATTRS{idProduct}=="b030", MODE="0664", GROUP="plugdev"
+ATTRS{idVendor}=="0416", ATTRS{idProduct}=="b058", MODE="0664", GROUP="plugdev"
+ATTRS{idVendor}=="2518", ATTRS{idProduct}=="6018", MODE="0664", GROUP="plugdev"
+ATTRS{idVendor}=="2518", ATTRS{idProduct}=="6022", MODE="0664", GROUP="plugdev"
 
 LABEL="pn53x_rules_end"

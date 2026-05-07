@@ -32,7 +32,7 @@ Requirements
 
 Some NFC drivers depend on third party software:
 
-* pn53x_usb & acr122_usb:
+* pn53x_usb & acr122_usb & nsr106_usb:
   
   - libusb-0.1 http://libusb.sf.net
 
